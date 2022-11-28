@@ -70,8 +70,7 @@ def pregunta_03():
     Entrenamiento del modelo sobre todo el conjunto de datos.
     Complete el código presentado a continuación.
     """
-
-    # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
+# Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
 
     # Asigne a la variable los valores de la columna `fertility`
@@ -81,7 +80,7 @@ def pregunta_03():
     y_life = np.array(df["life"]).reshape(len(df["life"]),1)
 
     # Importe LinearRegression
-    from sklearn.lenear_model import LinearRegression
+    from sklearn.linear_model import LinearRegression
 
     # Cree una instancia del modelo de regresión lineal
     reg = LinearRegression()
@@ -101,6 +100,7 @@ def pregunta_03():
 
     # Imprima el R^2 del modelo con 4 decimales
     print(reg.score(X_fertility, y_life).round(4))
+    
 
 
 def pregunta_04():
@@ -109,13 +109,12 @@ def pregunta_04():
     Complete el código presentado a continuación.
     """
 
-    # Importe LinearRegression
+      # Importe LinearRegression
     # Importe train_test_split
     # Importe mean_squared_error
     from sklearn.linear_model import LinearRegression
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import mean_squared_error
-
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
@@ -136,7 +135,7 @@ def pregunta_04():
     )
 
     # Cree una instancia del modelo de regresión lineal
-    linearRegression = linearRegression()
+    linearRegression = LinearRegression()
 
     # Entrene el clasificador usando X_train y y_train
     linearRegression.fit(X_train, y_train)
